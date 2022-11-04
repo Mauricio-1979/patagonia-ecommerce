@@ -8,6 +8,11 @@ productRouter.get("/", async (req, res) => {
     res.send(products);
 });
 
+productRouter.get("/saludo", async (req, res) => {
+  
+  res.send("This is a welcome!!");
+});
+
 const PAGE_SIZE = 3;
 
 productRouter.get("/search", expressAsyncHandler(async (req, res) => {
