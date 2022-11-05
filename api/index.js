@@ -1,4 +1,5 @@
 import express from "express";
+import cors from 'cors';
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
 import seedRouter from "./routes/seedRoutes.js";
@@ -16,6 +17,7 @@ mongoose.connect(process.env.MONGODB_URI)
 })
 
 const app =express();
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
