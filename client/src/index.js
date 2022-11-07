@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import { StoreProvider } from './Store';
 import axios from 'axios';
 
-axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:5000";
+axios.defaults.baseURL = process.env.REACT_APP_API || "https://patagonia-ecommerce.vercel.app/";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
